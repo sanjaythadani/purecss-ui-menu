@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>purecss-ui-menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" asp-append-version="true">
+    <link href="css/lib.css" rel="stylesheet">
+
+    <script>
+        var theme = location.href.indexOf("theme=dark") != -1 ? "dark" : "default";
+
+        var linlinkTheme = document.createElement("link");
+        linlinkTheme.href = "css/purecss-ui-" + theme + ".css";
+        linlinkTheme.rel = "stylesheet";
+        linlinkTheme.type = "text/css";
+        document.getElementsByTagName("head")[0].appendChild(linlinkTheme);
+
+        var linkThemeMenu = document.createElement("link");
+        linkThemeMenu.href = "css/purecss-ui-menu-" + theme + ".css";
+        linkThemeMenu.rel = "stylesheet";
+        linkThemeMenu.type = "text/css";
+        document.getElementsByTagName("head")[0].appendChild(linkThemeMenu);
+    </script>
+
+    <script src="js/lib.js"></script>
+    <script src="js/purecss-ui-menu.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="main-header" class="sticky-top">
+        <div class="pure-menu pure-menu-horizontal header-content">
+            <div class="menu-toggle mr-sm">
+                <button class="menu-toggle-button" data-target="">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="pure-g flex-align-center">
+                <div class="pure-u-md-1-24 pure-u-lg-2-24"></div>
+                <div class="pure-u-1 pure-u-md-22-24 pure-u-lg-20-24">
+                    <div class="mx-1">
+                        <div id="menu-container" class="pure-g flex-align-center">
+                            <div class="pure-u-20-24 pure-u-md-10-24">
+                                <div class="pure-menu-item brand flex-align-center">
+                                    <a href="/" class="no-decorator p-0">
+                                        <img src="images/pure-ui-logo.png" class="brand-logo" />
+                                        <span class="text-xl text-primary text-bold brand-title ml-sm">Pure.css UI Menu</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pure-u-4-24 pure-u-md-14-24 h-align-left">
+                                <ul class="pure-menu-list menu-collapse">
+                                    <li class="pure-menu-item"><a href="/" class="pure-menu-link">Default Theme</a></li>
+                                    <li class="pure-menu-item"><a href="?theme=dark" class="pure-menu-link">Dark Theme</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- body -->
+    <div class="main-content">
+        <div class="pure-g">
+            <div class="pure-u-md-1-24 pure-u-lg-2-24"></div>
+            <div class="pure-u-1 pure-u-md-22-24 pure-u-lg-20-24">
+
+                <div>
+                    <!-- menus -->
+                    <div class="mx-1">
+                        <h3>Menus</h3>
+                        <hr />
+                        <div class="pure-g">
+                            <div class="pure-u-1">
+                                <h5>Menu Default</h5>
+                                <div class="pure-menu pure-menu-horizontal">
+                                    <div class="menu-toggle mr-sm">
+                                        <button class="menu-toggle-button" data-target="">
+                                            <i class="fas fa-bars"></i>
+                                        </button>
+                                    </div>
+                                    <div id="menu-container" class="pure-g flex-align-center">
+                                        <div class="pure-u-4-24">
+                                            <div class="pure-menu-item brand flex-align-center">
+                                                <a href="" class="pure-menu-heading text-xl text-secondary py-0 pl-1">Brand</a>
+                                            </div>
+                                        </div>
+                                        <div class="pure-u-16-24 h-align-center">
+                                            <ul class="pure-menu-list menu-collapse">
+                                                <li class="pure-menu-item"><a href="" class="pure-menu-link active">Active</a></li>
+                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link</a></li>
+                                                <li class="pure-menu-item"><button class="pure-menu-link pure-button button-link">Button</button></li>
+                                                <li class="pure-menu-item sub-menu">
+                                                    <a href="" class="pure-menu-link">Sub Menu <i class="fas fa-chevron-down fa-xs"></i></a>
+                                                    <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                        <li class="pure-menu-item"><a class="pure-menu-link" href="">Link 1</a></li>
+                                                        <li class="pure-menu-item"><a class="pure-menu-link" href="">Link 2</a></li>
+                                                        <li class="pure-menu-item"><a class="pure-menu-link" href="">Link with long name</a></li>
+                                                        <li class="pure-menu-item"><button class="pure-menu-link pure-button button-link">Button</button></li>
+                                                        <li class="menu-section-divider"></li>
+                                                        <li class="menu-section-header">Header</li>
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Separated link 1</a></li>
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Separated link 2</a></li>
+                                                        <li class="menu-section-divider"></li>
+                                                        <li class="pure-menu-item sub-menu">
+                                                            <a href="" class="pure-menu-link">Sub Menu 1<i class="fas fa-chevron-right fa-sm icon-right"></i></a>
+                                                            <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 1</a></li>
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 2</a></li>
+                                                                <li class="pure-menu-item sub-menu">
+                                                                    <a href="" class="pure-menu-link">Sub Menu L2<i class="fas fa-chevron-right fa-sm icon-right"></i></a>
+                                                                    <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 1</a></li>
+                                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 2</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="pure-menu-item sub-menu">
+                                                            <a href="" class="pure-menu-link">Sub Menu 2<i class="fas fa-chevron-right fa-sm icon-right"></i></a>
+                                                            <ul class="sub-menu-content">
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 1</a></li>
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 2</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="pure-u-4-24 h-align-right">
+                                            <ul class="pure-menu-list menu-collapse">
+                                                <li class="pure-menu-item sub-menu">
+                                                    <a href="" class="pure-menu-link">User Name <i class="fas fa-chevron-down fa-xs"></i></a>
+                                                    <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link"><i class="fas fa-cog fa-sm icon-left"></i>Link 1</a></li>
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link"><i class="fas fa-sign-out-alt fa-sm icon-left"></i>Link 2</a></li>
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Link with long name</a></li>
+                                                        <li class="menu-section-divider"></li>
+                                                        <li class="menu-section-header">Header</li>
+                                                        <li class="pure-menu-item sub-menu">
+                                                            <a href="" class="pure-menu-link">Sub Menu Open Left<i class="fas fa-chevron-right fa-sm icon-right"></i></a>
+                                                            <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 1</a></li>
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 2</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pt-1"></div>
+
+                                <h5>Menu Inverse</h5>
+                                <div class="pure-menu pure-menu-horizontal menu-inverse">
+                                    <div class="menu-toggle mr-sm">
+                                        <button class="menu-toggle-button" data-target="">
+                                            <i class="fas fa-bars"></i>
+                                        </button>
+                                    </div>
+                                    <div id="menu-container" class="pure-g flex-align-center">
+                                        <div class="pure-u-4-24">
+                                            <div class="pure-menu-item brand flex-align-center">
+                                                <a href="" class="pure-menu-heading text-xl text-secondary py-0 pl-1">Brand</a>
+                                            </div>
+                                        </div>
+                                        <div class="pure-u-16-24 h-align-center">
+                                            <ul class="pure-menu-list menu-collapse">
+                                                <li class="pure-menu-item"><a href="" class="pure-menu-link active">Active</a></li>
+                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link</a></li>
+                                                <li class="pure-menu-item"><button class="pure-menu-link pure-button button-link">Button</button></li>
+                                                <li class="pure-menu-item sub-menu">
+                                                    <a href="" class="pure-menu-link">Sub Menu <i class="fas fa-chevron-down fa-xs"></i></a>
+                                                    <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                        <li class="pure-menu-item"><a class="pure-menu-link" href="">Link 1</a></li>
+                                                        <li class="pure-menu-item"><a class="pure-menu-link" href="">Link 2</a></li>
+                                                        <li class="pure-menu-item"><a class="pure-menu-link" href="">Link with long name</a></li>
+                                                        <li class="pure-menu-item"><button class="pure-menu-link pure-button button-link">Button</button></li>
+                                                        <li class="menu-section-divider"></li>
+                                                        <li class="menu-section-header">Header</li>
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Separated link 1</a></li>
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Separated link 2</a></li>
+                                                        <li class="menu-section-divider"></li>
+                                                        <li class="pure-menu-item sub-menu">
+                                                            <a href="" class="pure-menu-link">Sub Menu 1<i class="fas fa-chevron-right fa-sm icon-right"></i></a>
+                                                            <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 1</a></li>
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 2</a></li>
+                                                                <li class="pure-menu-item sub-menu">
+                                                                    <a href="" class="pure-menu-link">Sub Menu L2<i class="fas fa-chevron-right fa-sm icon-right"></i></a>
+                                                                    <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 1</a></li>
+                                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 2</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="pure-menu-item sub-menu">
+                                                            <a href="" class="pure-menu-link">Sub Menu 2<i class="fas fa-chevron-right fa-sm icon-right"></i></a>
+                                                            <ul class="sub-menu-content">
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 1</a></li>
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 2</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="pure-u-4-24 h-align-right">
+                                            <ul class="pure-menu-list menu-collapse">
+                                                <li class="pure-menu-item sub-menu">
+                                                    <a href="" class="pure-menu-link">User Name <i class="fas fa-chevron-down fa-xs"></i></a>
+                                                    <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link"><i class="fas fa-cog fa-sm icon-left"></i>Link 1</a></li>
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link"><i class="fas fa-sign-out-alt fa-sm icon-left"></i>Link 2</a></li>
+                                                        <li class="pure-menu-item"><a href="" class="pure-menu-link">Link with long name</a></li>
+                                                        <li class="menu-section-divider"></li>
+                                                        <li class="menu-section-header">Header</li>
+                                                        <li class="pure-menu-item sub-menu">
+                                                            <a href="" class="pure-menu-link">Sub Menu Open Left<i class="fas fa-chevron-right fa-sm icon-right"></i></a>
+                                                            <ul class="sub-menu-content" data-right-bound="menu-container">
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 1</a></li>
+                                                                <li class="pure-menu-item"><a href="" class="pure-menu-link">Link 2</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer-content">
+        <div class="pure-g">
+            <div class="pure-u-md-1-24 pure-u-lg-2-24"></div>
+            <div class="pure-u-1 pure-u-md-11-24 pure-u-lg-10-24">
+                <div class="mx-1 text-information">
+                    <span>Content on this site licensed under the <a href="https://github.com/sanjaythadani/purecss-ui-menu/blob/master/LICENSE" class="text-information">MIT License</a>.</span>
+                </div>
+            </div>
+            <div class="pure-u-1 pure-u-md-11-24 pure-u-lg-10-24 h-align-right">
+                <div class="mx-1 text-information">
+                    <a href="https://github.com/sanjaythadani/purecss-ui-menu" class="text-information">GitHub Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.ready(function() {
+            pu.menu.init();
+        });
+    </script>
+</body>
+</html>

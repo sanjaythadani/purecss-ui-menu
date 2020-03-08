@@ -1,0 +1,64 @@
+{
+  "name": "purecss-ui-menu",
+  "version": "1.0.0",
+  "description": "Responsive menu system with submenus and dropdowns build to use with purecss-ui.",
+  "author": "Sanjay Thadani",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanjaythadani/purecss-ui-menu"
+  },
+  "keywords": [
+    "purecss",
+    "purecss-ui",
+    "purecss ui",
+    "purecss-ui-menu",
+    "purecss ui menu"
+  ],
+  "files": [
+    "dist/*",
+    "public/*",
+    "src/*"
+  ],
+  "scripts": {
+    "serve": "node app.js",
+    "watch": "gulp watch",
+    "build:dev": "gulp build:dev",
+    "build:dist": "gulp build:dist"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "purecss": "^1.0.1",
+    "purecss-ui": "^1.0.4",
+    "vanilla-ready": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.8.3",
+    "@babel/preset-env": "7.8.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "event-stream": "^4.0.1",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-live-server": "0.0.31",
+    "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "hogan-express": "^0.5.2",
+    "postcss-calc": "^7.0.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-import-ext-glob": "^1.1.0",
+    "postcss-replace": "^1.1.0",
+    "precss": "^4.0.0",
+    "yargs": "^15.1.0"
+  }
+}

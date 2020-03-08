@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "launch app",
+            "type": "node",
+            "request": "launch",
+            "env": { "NODE_ENV": "development" },
+            "program": "${workspaceFolder}/src/js/app.js"
+        },
+        {
+            "name": "gulp:watch",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+            "stopOnEntry": false,
+            "args": [
+                "watch"
+            ],
+            "runtimeArgs": [
+                "--inspect-brk",
+                "--nolazy"
+            ],
+            "port": 9229,
+            "console": "internalConsole"
+        }
+    ]
+}
