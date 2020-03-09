@@ -1,30 +1,30 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>purecss-ui-menu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/favicon.ico" asp-append-version="true">
-    <link href="css/lib.css" rel="stylesheet">
+    <link rel="icon" href="public/images/favicon.ico" asp-append-version="true">
+    <link href="public/css/lib.css" rel="stylesheet">
 
     <script>
         var theme = location.href.indexOf("theme=dark") != -1 ? "dark" : "default";
 
         var linlinkTheme = document.createElement("link");
-        linlinkTheme.href = "css/purecss-ui-" + theme + ".css";
+        linlinkTheme.href = "public/css/purecss-ui-" + theme + ".css";
         linlinkTheme.rel = "stylesheet";
         linlinkTheme.type = "text/css";
         document.getElementsByTagName("head")[0].appendChild(linlinkTheme);
 
         var linkThemeMenu = document.createElement("link");
-        linkThemeMenu.href = "css/purecss-ui-menu-" + theme + ".css";
+        linkThemeMenu.href = "public/css/purecss-ui-menu-" + theme + ".css";
         linkThemeMenu.rel = "stylesheet";
         linkThemeMenu.type = "text/css";
         document.getElementsByTagName("head")[0].appendChild(linkThemeMenu);
     </script>
 
-    <script src="js/lib.js"></script>
-    <script src="js/purecss-ui-menu.js"></script>
+    <script src="public/js/lib.js"></script>
+    <script src="public/js/purecss-ui-menu.js"></script>
 </head>
 
 <body>
@@ -43,15 +43,15 @@
                         <div id="menu-container" class="pure-g flex-align-center">
                             <div class="pure-u-20-24 pure-u-md-10-24">
                                 <div class="pure-menu-item brand flex-align-center">
-                                    <a href="/" class="no-decorator p-0">
-                                        <img src="images/pure-ui-logo.png" class="brand-logo" />
+                                    <a href="/purecss-ui/" class="no-decorator p-0">
+                                        <img src="public/images/pure-ui-logo.png" class="brand-logo" />
                                         <span class="text-xl text-primary text-bold brand-title ml-sm">Pure.css UI Menu</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="pure-u-4-24 pure-u-md-14-24 h-align-left">
                                 <ul class="pure-menu-list menu-collapse">
-                                    <li class="pure-menu-item"><a href="/" class="pure-menu-link">Default Theme</a></li>
+                                    <li class="pure-menu-item"><a href="/purecss-ui/" class="pure-menu-link">Default Theme</a></li>
                                     <li class="pure-menu-item"><a href="?theme=dark" class="pure-menu-link">Dark Theme</a></li>
                                 </ul>
                             </div>
