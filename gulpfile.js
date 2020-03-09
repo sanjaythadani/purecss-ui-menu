@@ -297,13 +297,18 @@ function buildGhpages(resolve) {
             .pipe(gulp.dest('./public/images')),
         gulp.src(['./node_modules/@fortawesome/fontawesome-free/webfonts/**'], { allowEmpty: true })
             .pipe(gulp.dest('./public/fonts')),
+        gulp.src(['./node_modules/vanilla-ready/vanilla-ready.js'], { allowEmpty: true })
+            .pipe(babel({ presets: ['@babel/env'] }))
+            .pipe(concat('lib.js'))
+            .pipe(uglify())
+            .pipe(gulp.dest('./public/js')),
         gulp.src(['./src/js/purecss.ui*.js'], { allowEmpty: true })
             .pipe(babel({ presets: ['@babel/env'] }))
             .pipe(concat('purecss-ui-menu.js'))
             .pipe(uglify())
             .pipe(gulp.dest('./public/js')),
         gulp.src(['./index.html'], { allowEmpty: true })
-            .pipe(replace('href="/"', 'href="/purecss-ui/"'))
+            .pipe(replace('href="/"', 'href="/purecss-ui-menu/"'))
             .pipe(replace('"css/', '"public/css/'))
             .pipe(replace('"fonts/', '"public/fonts/'))
             .pipe(replace('"images/', '"public/images/'))

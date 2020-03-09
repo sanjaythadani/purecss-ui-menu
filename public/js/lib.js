@@ -1,0 +1,2 @@
+"use strict";
+/* @preserve vanilla-ready: execute a callback function when the DOM is fully loaded. [c]2016 @dmarchena. (Based on https://gist.github.com/raymonschouwenaar/84bc7def8fbfa06ffd84 by Raymon Schouwenaar). Licensed MIT */!function(t){HTMLDocument.prototype.ready=function(e){t.attachEvent?"complete"===t.readyState?e():t.attachEvent("onreadystatechange",(function(){"complete"===t.readyState&&e()})):"loading"!==t.readyState&&null!=e?e():t.addEventListener&&t.addEventListener("DOMContentLoaded",e)}}(document);
