@@ -1,7 +1,7 @@
 {
   "name": "purecss-ui-menu",
-  "version": "1.0.0",
-  "description": "Responsive menu system with submenus and dropdowns build to use with purecss-ui.",
+  "version": "1.0.1",
+  "description": "Responsive menu system with submenus and dropdowns built on purecss-ui.",
   "author": "Sanjay Thadani",
   "private": false,
   "license": "MIT",
