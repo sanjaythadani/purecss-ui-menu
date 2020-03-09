@@ -10,7 +10,7 @@ GitHub: https://github.com/sanjaythadani/purecss-ui
 Once the parent design system is installed, then install the submenu package:  
 npm install purecss-ui-menu --save  
 
-Include any one of the CSS stylesheets from the dist folders of the package, depending on the required theme and the minification required.  
+Include any one of the CSS stylesheets from the dist folders of the package, depending on the required theme and the minification.  
 <link href="purecss-ui-default.css" rel="stylesheet">
 <link href="purecss-ui-menu-default.css" rel="stylesheet">
 
